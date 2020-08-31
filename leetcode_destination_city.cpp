@@ -16,6 +16,10 @@ Input: paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]
 Output: "Sao Paulo" 
 Explanation: Starting at "London" city you will reach "Sao Paulo" city which is the destination city. Your trip consist of: "London" -> "New York" -> "Lima" -> "Sao Paulo".
 
+
+Runtime: 28 ms, faster than 62.55% of C++ online submissions for Destination City.
+Memory Usage: 11 MB, less than 54.18% of C++ online submissions for Destination City.
+
 */
 class Solution {
 public:
