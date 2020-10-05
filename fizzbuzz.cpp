@@ -13,7 +13,23 @@
 
 using namespace std;
 
-int main()
+string fizzBuzzString(int n)
+{
+	/*
+		Source: https://www.youtube.com/watch?v=nItSZp6R8tg
+	*/
+	
+	string result;
+	if( n % 3 == 0 )
+		result += "Fizz";
+	if( n % 5 == 0 )
+		result += "Buzz";
+	if( result.empty() )
+		result = to_string(n);
+	return result;
+}
+
+void fizzBuzzNaive()
 {
 	for (int i = 0; i <= 100; i++)
 	{
@@ -33,6 +49,12 @@ int main()
 		{
 			cout << i << endl;
 		}
+	}
+}
+
+int main()
+{
+	
     
  return 0;   
 }
