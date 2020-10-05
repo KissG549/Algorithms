@@ -54,7 +54,10 @@ void fizzBuzzNaive()
 
 int main()
 {
+	for( int i = ; i <= 100; ++i)
+	{
+		cout << fizzBuzzString(i) << " " << endl;
+	}
 	
-    
  return 0;   
 }
