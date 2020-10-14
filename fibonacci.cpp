@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 /*
 	Sum of all fibonacci numbers below fibLimit
 */
@@ -78,16 +77,15 @@ int fibonacciIterative(int N) {
     return fib;
 }
 
-
 // Fibonacci recursive solution
 int fibonacciRecursive(int num)
 {
-    if(num == 0 || num == 1)
+    if( num == 0 || num == 1 )
     {
         return num;
     }
 
-    return fibonacciRecursive(num-1) + fibonacciRecursive(num -2);    
+    return fibonacciRecursive( num - 1 ) + fibonacciRecursive( num - 2 );    
 }
 
 int main()
