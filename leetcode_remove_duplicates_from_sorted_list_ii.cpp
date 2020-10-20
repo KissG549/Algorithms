@@ -36,31 +36,6 @@
 class Solution {
 public:
     
-     ListNode* removeNode( ListNode *pPrevNode, ListNode* pNode)
-    {
-        /*
-            head->next points to the second node
-            second->next points to the third node
-            
-            to remove second
-            
-            head->next must point to the third node
-            then remove the second node
-        */
-        
-        if( pPrevNode == nullptr || pNode == nullptr )
-        {
-            return nullptr;
-        }
-        
-        pPrevNode->next = pNode->next;
-        
-        delete pNode;
-        
-        return pPrevNode->next;
-    }
-    
-    
     ListNode* deleteDuplicates(ListNode* pHead) {
         
         // empty list
@@ -83,7 +58,18 @@ public:
         {
             if( firstNode->val == secondNode->val )
             {
-                secondNode = removeNode( firstNode, secondNode );
+                 /*
+                    head->next points to the second node
+                    second->next points to the third node
+
+                    to remove second
+
+                    head->next must point to the third node
+                    then remove the second node
+                */
+                firstNode->next = secondNode->next;
+                delete secondNode;
+                secondNode = firstNode->next;
             }
             else
             {
