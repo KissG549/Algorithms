@@ -75,19 +75,19 @@ public:
             return pHead;
         }
         
-        ListNode *firtNode = pHead;
+        ListNode *firstNode = pHead;
         ListNode *secondNode = pHead->next;
         
             
         while( secondNode != nullptr )
         {
-            if( firtNode->val == secondNode->val )
+            if( firstNode->val == secondNode->val )
             {
-                secondNode = removeNode( firtNode, secondNode );
+                secondNode = removeNode( firstNode, secondNode );
             }
             else
             {
-                firtNode = secondNode;
+                firstNode = secondNode;
                 secondNode = secondNode->next;
             }
             
